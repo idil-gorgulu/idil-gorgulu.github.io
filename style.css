@@ -61,7 +61,7 @@ p {
 }
 
 .cv-button {
-  background-color: #ff69b4;
+  background-color: #b33d44;
   color: white;
   flex-direction: column;
   font-weight: bold;
@@ -80,9 +80,73 @@ p {
 }
 
 .cv-button:hover {
-  background-color: #ff4da6;
+  background-color: #b33d44;
 }
 
 .cv-button:active {
-  background-color: #cc3c89;
+  background-color: hwb(358 35% 21%);
+}
+
+.timeline-section {
+  padding: 60px 40px;
+  background-color: #ffffff;
+}
+
+.timeline-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #343a40;
+  text-align: center;
+}
+
+#timeline {
+  position: relative;
+  margin-left: 40px;
+  border-left: 6px solid #b33d44;
+  padding-left: 30px;
+}
+
+.timeline-event {
+  position: relative;
+  margin: 60px 0;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-event .dot {
+  width: 20px;
+  height: 20px;
+  background: #b33d44;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  left: -43px; /* aligns with the line */
+  top: 0;
+}
+
+.timeline-event .dot.active {
+  transform: scale(1.8);
+  box-shadow: 0 0 12px #b33d44;
+}
+
+.timeline-event .content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  max-width: 500px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  margin-left: 10px;
+}
+
+.timeline-event .content.visible {
+  opacity: 1;
+}
+
+.timeline-event .content strong {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+  color: #111;
 }

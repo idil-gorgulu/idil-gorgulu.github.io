@@ -10,7 +10,7 @@
 <body>
   <div class="container">
     <h1>İdil Görgülü</h1>
-    <p> Computer Engineer | Electrical and Electronics Engineer | Aspiring Researcher</p>
+    <p>Computer Engineer | Electrical and Electronics Engineer | Aspiring Researcher</p>
 
     <div class="icon-buttons">
       <a href="https://www.linkedin.com/in/idilgorgulu" target="_blank" class="circle-btn">
@@ -24,5 +24,120 @@
       </a>
     </div>
   </div>
+
+  <section class="timeline-section">
+    <h2>Academic Journey</h2>
+    <div id="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Jul 2025 – Present: Researcher, TUM</strong>
+          Exploring approximate multipliers in C-based NN accelerators and building automation tools for model-aware approximation.
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Jun 2024 – Sep 2024: Researcher, TUM</strong>
+          Developed Python-based cryogenic measurement software; tested custom circuits at Fraunhofer EMFT with SCPI-controlled instruments.
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Jun 2023 – Sep 2024: Undergraduate Researcher, Koç University</strong>
+          Designed VHDL/Verilog-based RISC-V processor for CNNs; TEKNOFEST 2024 Chip Design Competition finalist.
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Feb 2024 – Jun 2024: Teaching Assistant, COMP201</strong>
+          Led labs and office hours in C and Assembly; assisted 50+ students under Dr. Aykut Erdem.
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Oct 2023 – Feb 2024: Software Developer Intern, KU IT Center</strong>
+          Built Flutter front-end and designed MVC architecture for the KUHub platform.
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Oct 2023 – Jan 2024: Lab Assistant, COMP132</strong>
+          Guided students in Java/OOP during weekly labs and evaluations for Dr. Öznur Özkasap.
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Jul 2023 – Aug 2023: Computer Vision Intern, STM</strong>
+          Boosted dataset mAP by 5% via YOLOv8 tuning; participated in aerial image data collection and model evaluation.
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Feb 2023 – Jun 2023: Teaching Assistant, ENGR 200</strong>
+          Co-led sessions on probability and random variables under the supervision of Dr. Alper Demir.
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Dec 2022 – Apr 2023: Research Assistant, KUIS AI Lab</strong>
+          Annotated 10,000+ comic book frames for facial recognition training.
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Sep 2021 – Present: Koç University</strong>
+          Double major in Computer Engineering & Electrical/Electronics Engineering, GPA: 3.74/4.0
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="dot"></div>
+        <div class="content">
+          <strong>Sep 2017 – Jun 2021: TED Ankara College</strong>
+          Graduated 2nd in class (600 students), Academic Science Program, 100% scholarship.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const dot = entry.target.querySelector('.dot');
+        const content = entry.target.querySelector('.content');
+        if (entry.isIntersecting) {
+          dot.classList.add('active');
+          content.classList.add('visible');
+        } else {
+          dot.classList.remove('active');
+          content.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.timeline-event').forEach(event => {
+      observer.observe(event);
+    });
+  </script>
 </body>
 </html>
