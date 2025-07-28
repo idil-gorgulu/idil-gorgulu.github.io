@@ -1,42 +1,72 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #343a40;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
 .container {
-    text-align: center;
-    padding: 10vh 20px;
+  text-align: center;
+  padding: 10vh 20px;
 }
 
 h1 {
-    font-size: 3em;
-    margin-bottom: 0.2em;
+  font-size: 3em;
+  margin-bottom: 0.2em;
 }
 
 p {
-    font-size: 1.2em;
-    color: #6c757d;
+  font-size: 1.2em;
+  color: #6c757d;
 }
 
-.buttons {
-    margin-top: 2em;
+.icon-buttons {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 24px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
+.circle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #dee2e6;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  text-decoration: none;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.circle-btn:hover {
+  transform: scale(1.05);
+}
+
+.circle-btn img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.cv-button {
+  background-color: #ff69b4; /* Hot pink */
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+}
+
+.cv-button span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cv-button i {
+  margin-top: 4px;
 }
